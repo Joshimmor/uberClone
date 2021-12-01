@@ -1,0 +1,21 @@
+<mat-tab-group *ngIf="data.length > 2">
+    <mat-tab label="Recent">
+        <app-rest-card [ResturantDetails]="data[0]"></app-rest-card>
+    </mat-tab>
+    <mat-tab label="Popular">
+        <app-rest-card [ResturantDetails]="data[1]"></app-rest-card>
+    </mat-tab>
+    <mat-tab label="New">
+        <app-rest-card [ResturantDetails]="data[2]"></app-rest-card>
+    </mat-tab>
+</mat-tab-group>
+<div class="search">
+    <mat-form-field class="" appearance="outline">
+      <mat-label>Search</mat-label>
+      <input [(ngModel)]="FilteredSearchItem" (keyup)="search()" (keydown)="deleteSearch($event)" type="text" matInput placeholder="Search Here">
+      <mat-icon matSuffix>saved_search</mat-icon>
+    </mat-form-field>
+</div>
+<div *ngIf="data.length > 2">
+    <app-rest-card *ngFor="let item of filterData"[ResturantDetails]="item"></app-rest-card>
+</div>

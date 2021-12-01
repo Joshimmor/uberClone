@@ -1,0 +1,35 @@
+<mat-sidenav-container class="container" autosize>
+    <mat-sidenav #drawer class="sidenav-cart" mode="side">
+        <div *ngFor="let item of cart" class="row">
+            <h3>{{item.Food}}</h3>
+        </div>
+        <div class="row">
+            <h2>Total:{{total}}</h2>
+        </div>
+        
+    </mat-sidenav>
+  
+    <mat-sidenav-content class="content">
+    <button id="backwards" type="button" mat-button (click)="home()">
+            <mat-icon>arrow_back</mat-icon>
+     </button>
+      <button id="cart" type="button" mat-button (click)="drawer.toggle()">
+        <mat-icon>shopping_cart</mat-icon>
+      </button>
+      <img style="width: 100%;" src={{data.image}}/>
+      <h1 style="padding-left: 20px;">{{data.resturantName}}</h1>
+      <div class="row">
+        <a href={{data.image}} target="_blank">Visit Site</a>
+        <a href="/contact">Contact</a>
+      </div>
+      <mat-divider></mat-divider>
+      <div *ngFor="let item of data.Menu" class="row">
+          <div class="col">
+            <h3>{{item.Food}}</h3>
+             <p>{{item.Price}}</p>
+          </div>
+        <button mat-raised-button color="primary" (click)="addItem(item)">Add to Cart</button>
+      </div>
+    </mat-sidenav-content >
+  
+  </mat-sidenav-container>

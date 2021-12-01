@@ -1,0 +1,19 @@
+<div class="col">
+    <mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Reason for Contacting</mat-label>
+        <mat-select>
+          <mat-option value="one">Help with order</mat-option>
+          <mat-option value="two">Place a Order</mat-option>
+          <mat-option value="Three">Drive for Uber</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Textarea</mat-label>
+        <textarea matInput></textarea>
+      </mat-form-field>
+      <button mat-raised-button color="primary" (click)="ThankYou()">Submit</button>
+</div>
