@@ -1,6 +1,7 @@
 import { HttpClient} from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { ResturantModel } from '../ResturantModel';
+import { Router } from '@angular/router';
+import { FoodItem, ResturantModel } from '../ResturantModel';
 
 @Component({
   selector: 'app-home-page',
@@ -27,4 +28,5 @@ export class HomePageComponent implements OnInit {
   search(){
     this.filterData = this.filterData.filter( n => n.resturantName.toUpperCase().match(this.FilteredSearchItem.toUpperCase()) || n.FoodStyle.toUpperCase().match(this.FilteredSearchItem.toUpperCase()))
   }
+
 }

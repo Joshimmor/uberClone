@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ResturantModel } from '../ResturantModel';
 
 @Component({
@@ -9,12 +10,12 @@ import { ResturantModel } from '../ResturantModel';
 export class RestCardComponent implements OnInit {
   @Input() ResturantDetails!: ResturantModel;
   link: string = "resturant/"
-  constructor() { }
+  constructor(private readonly router: Router) { }
 
   ngOnInit(): void {
     this.link += this.ResturantDetails.id
   }
   ButtonClick(){
-    window.location.href = this.link
+    this.router.navigate([this.link])
   }
 }

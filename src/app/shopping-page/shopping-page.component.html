@@ -10,17 +10,20 @@
     </mat-sidenav>
   
     <mat-sidenav-content class="content">
-    <button id="backwards" type="button" mat-button (click)="home()">
-            <mat-icon>arrow_back</mat-icon>
-     </button>
+      <div id="nav-row" class="row">
+        <button id="backwards" type="button" mat-button (click)="home()">
+          <mat-icon>arrow_back</mat-icon>
+       </button>
       <button id="cart" type="button" mat-button (click)="drawer.toggle()">
-        <mat-icon>shopping_cart</mat-icon>
+          <mat-icon>shopping_cart</mat-icon>
       </button>
+      </div>
+    
       <img style="width: 100%;" src={{data.image}}/>
       <h1 style="padding-left: 20px;">{{data.resturantName}}</h1>
       <div class="row">
         <a href={{data.image}} target="_blank">Visit Site</a>
-        <a href="/contact">Contact</a>
+        <a (click)="contact()">Contact</a>
       </div>
       <mat-divider></mat-divider>
       <div *ngFor="let item of data.Menu" class="row">

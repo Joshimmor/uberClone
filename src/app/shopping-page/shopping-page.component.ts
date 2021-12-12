@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ResturantModel, FoodItem } from '../ResturantModel';
 import { Router } from '@angular/router';
 import { of,  Observable } from 'rxjs';
+import { HomePageComponent } from '../home-page/home-page.component';
 
 @Component({
   selector: 'app-shopping-page',
@@ -36,7 +37,9 @@ export class ShoppingPageComponent implements OnInit {
       this.total += item.Price
     }
     home(){
-      window.location.href = ""
+     this.router.navigate([""])
     }
-
+    contact(){
+      this.router.navigate(["contact"])
+    }
 }

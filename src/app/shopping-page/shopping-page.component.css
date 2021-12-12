@@ -13,18 +13,13 @@
   .sidenav-cart {
     padding: 20px;
   }
-  #cart{
+  #nav-row{
       position: fixed;
       top: 20px;
-      right: 20px;
+      background-color: white;
       z-index: 5;
   }
-  #backwards{
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 5;
-  }
+ 
   .row{
       box-sizing: border-box;
       width: 100%;
@@ -33,6 +28,13 @@
       justify-content: space-between;
       padding:20px
   }
+  #nav-row{
+    position: fixed;
+    top: 0;
+    background-color: white;
+    z-index: 5;
+
+}
   .col{
       display: flex;
       flex-direction: column;

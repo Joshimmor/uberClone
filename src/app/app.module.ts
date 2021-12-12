@@ -19,6 +19,7 @@ import { RestCardComponent } from './rest-card/rest-card.component';
 import { ShoppingPageComponent } from './shopping-page/shopping-page.component';
 import { ContactComponent } from './contact/contact.component';
 import { ThankYouComponent } from './thank-you/thank-you.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +45,8 @@ import { ThankYouComponent } from './thank-you/thank-you.component';
     MatFormFieldModule,
     MatSelectModule
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
